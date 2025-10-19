@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { mockSkills, mockCategories } from '@/data/mockData';
 
 export default function Home() {
@@ -28,11 +29,11 @@ export default function Home() {
     .slice(0, 6);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white dark:bg-gray-900 flex flex-col">
       <Header />
       
       {/* Hero Section with Prominent Search */}
-      <section className="bg-white dark:bg-gray-900 py-16 md:py-24 border-b border-gray-200 dark:border-gray-800">
+      <section className="bg-white dark:bg-gray-900 py-16 md:py-24 border-b border-gray-200 dark:border-gray-800 flex-grow">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -91,7 +92,7 @@ export default function Home() {
       {/* Stats Bar */}
       <section className="bg-gray-50 dark:bg-gray-800 py-6 border-b border-gray-200 dark:border-gray-700">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center max-w-4xl mx-auto">
             <div>
               <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
                 {mockSkills.length.toLocaleString()}
@@ -109,12 +110,6 @@ export default function Home() {
                 {mockCategories.length}
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-400">categories</div>
-            </div>
-            <div>
-              <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-                {mockSkills.filter((s) => !s.isPaid).length}
-              </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">free skills</div>
             </div>
           </div>
         </div>
@@ -230,56 +225,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 mt-8 border-t border-gray-800">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Help</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Installing skills</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Publishing skills</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">User guide</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">About RSI</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">RSI Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Infrastructure</a></li>
-                {/* <li><a href="#" className="hover:text-white transition-colors">Sponsor</a></li> */}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Community</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Forums</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Mailing lists</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Code of Conduct</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contributing</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Bugs and feedback</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contribute on GitHub</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Development credits</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <div className="mb-4 md:mb-0">
-              © 2025 Robotics Skills Index. Powered by the robotics community.
-            </div>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors">Status</a>
-              <a href="#" className="hover:text-white transition-colors">Privacy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

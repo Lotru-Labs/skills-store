@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white dark:bg-gray-900 flex flex-col">
       <Header />
       
-      <div className="container mx-auto px-4 py-16 md:py-24">
+      <div className="container mx-auto px-4 py-16 md:py-24 flex-grow">
         <div className="max-w-2xl mx-auto text-center">
           {/* Robot with hand gesture */}
           <div className="text-9xl mb-8 animate-pulse">
@@ -58,56 +59,7 @@ export default function NotFound() {
         </div>
       </div>
       
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 mt-16 border-t border-gray-800">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Help</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Installing skills</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Publishing skills</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">User guide</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">About RSI</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">RSI Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Infrastructure</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Sponsor</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Community</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Forums</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Mailing lists</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Code of Conduct</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contributing</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Bugs and feedback</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contribute on GitHub</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Development credits</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <div className="mb-4 md:mb-0">
-              © 2025 Robotics Skills Index. Powered by the robotics community.
-            </div>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors">Status</a>
-              <a href="#" className="hover:text-white transition-colors">Privacy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
