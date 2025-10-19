@@ -1,20 +1,21 @@
 'use client';
 
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Header from '@/components/Header';
 
 import Footer from '@/components/Footer';
 
-export default function ComingSoon() {
+function ComingSoon() {
   const searchParams = useSearchParams();
   const feature = searchParams.get('feature') || 'This feature';
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 flex flex-col">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <Header />
       
-      <div className="container mx-auto px-4 py-16 md:py-24 flex-grow">
+      <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-2xl mx-auto text-center">
           {/* Icon */}
           <div className="mb-8">
@@ -91,3 +92,22 @@ export default function ComingSoon() {
     </div>
   );
 }
+
+export default function ComingSoonPage() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+                <Header />
+                <div className="flex items-center justify-center h-screen">
+                    <div className="text-center">
+                        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+                        <p className="mt-4 text-gray-600 dark:text-gray-400">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        }>
+            <ComingSoon />
+        </Suspense>
+    );
+}
+
