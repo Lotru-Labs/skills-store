@@ -1,0 +1,50 @@
+[
+  {
+    "id": "navigation",
+    "name": "Navigation",
+    "icon": "🧭",
+    "count": 3
+  },
+  {
+    "id": "manipulation",
+    "name": "Manipulation",
+    "icon": "🤖",
+    "count": 2
+  },
+  {
+    "id": "vision",
+    "name": "Computer Vision",
+    "icon": "👁️",
+    "count": 3
+  },
+  {
+    "id": "speech",
+    "name": "Speech & NLP",
+    "icon": "💬",
+    "count": 2
+  },
+  {
+    "id": "planning",
+    "name": "Path Planning",
+    "icon": "🗺️",
+    "count": 3
+  },
+  {
+    "id": "control",
+    "name": "Control Systems",
+    "icon": "🎮",
+    "count": 2
+  },
+  {
+    "id": "perception",
+    "name": "Perception",
+    "icon": "📡",
+    "count": 3
+  },
+  {
+    "id": "integration",
+    "name": "Integration",
+    "icon": "🔗",
+    "count": 2
+  }
+]
