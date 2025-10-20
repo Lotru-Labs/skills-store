@@ -12,6 +12,12 @@
   }
 }
 
+html {
+  /* Always show vertical scrollbar to prevent layout shift.
+     There may be a better way to do this but for now it works! */
+  overflow-y: scroll;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
