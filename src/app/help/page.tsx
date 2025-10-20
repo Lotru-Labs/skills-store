@@ -6,7 +6,6 @@ import Header from '@/components/Header';
 import SearchBar from '@/components/SearchBar';
 import CategoryFilter from '@/components/CategoryFilter';
 import SkillCard from '@/components/SkillCard';
-import { mockSkills, mockCategories } from '@/data/mockData';
 
 export default function BrowsePage() { 
   return (
