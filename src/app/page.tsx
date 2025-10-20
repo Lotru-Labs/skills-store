@@ -193,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* Getting Started */}
-      <section className="py-12 bg-white dark:bg-gray-900">
+      {/* <section className="py-12 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
             Getting started
@@ -223,7 +223,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>
