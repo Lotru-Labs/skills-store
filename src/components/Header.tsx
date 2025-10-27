@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   return (
@@ -7,7 +8,13 @@ export default function Header() {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="text-3xl">🤖</div>
+            <Image 
+              src="/rsi_icon.webp" 
+              alt="RSI Logo" 
+              width={32} 
+              height={32}
+              className="rounded"
+            />
             <span className="text-xl font-bold text-gray-900 dark:text-white">
               RSI
             </span>
