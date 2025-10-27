@@ -19,8 +19,9 @@ export function getDbProvider(includeMockSkills?: boolean): DatabaseProvider {
   }
 
   const providerType = process.env.DB_PROVIDER || 'json';
-  // Default to including mock skills in development, but allow explicit override
-  const shouldIncludeMocks = includeMockSkills ?? process.env.NODE_ENV !== 'production';
+  // Default to including mock skills in development, but allow explicit override. Uncomment once in production.
+  const shouldIncludeMocks = true;
+  // const shouldIncludeMocks = includeMockSkills ?? process.env.NODE_ENV !== 'production';
 
   switch (providerType) {
     case 'json':

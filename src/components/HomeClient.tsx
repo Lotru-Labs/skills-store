@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SkillCard from '@/components/SkillCard';
 import { Skill, Category } from '@/types';
 
 interface HomeClientProps {
@@ -26,6 +27,10 @@ export default function HomeClient({ initialSkills, initialCategories }: HomeCli
 
   const handleCategoryClick = (categoryId: string) => {
     router.push(`/browse?category=${categoryId}`);
+  };
+
+  const handleSkillClick = (skillName: string) => {
+    router.push(`/browse?q=${encodeURIComponent(skillName)}`);
   };
 
   const totalDownloads = initialSkills.reduce((sum, skill) => sum + skill.downloads, 0);
@@ -88,7 +93,7 @@ export default function HomeClient({ initialSkills, initialCategories }: HomeCli
               href="/browse"
               className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
             >
-              Or browse projects →
+              Or browse skills →
             </a>
           </div>
         </div>
@@ -162,47 +167,12 @@ export default function HomeClient({ initialSkills, initialCategories }: HomeCli
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {recentSkills.map((skill) => (
-              <div
-                key={skill.id}
-                className="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 transition-colors"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    {skill.icon && (skill.icon.startsWith('http://') || skill.icon.startsWith('https://')) ? (
-                      <img 
-                        src={skill.icon} 
-                        alt={skill.name}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <span className="text-white font-bold text-sm">
-                        {skill.icon || 'SKL'}
-                      </span>
-                    )}
-                  </div>
-                  {skill.isPaid && (
-                    <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 text-xs font-semibold rounded">
-                      ${skill.price}
-                    </span>
-                  )}
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  {skill.name}
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
-                  {skill.description}
-                </p>
-                <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400">
-                  <div className="flex items-center gap-1">
-                    <span>⭐</span>
-                    <span>{skill.rating.toFixed(1)}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <span>⬇️</span>
-                    <span>{skill.downloads.toLocaleString()}</span>
-                  </div>
-                </div>
-              </div>
+              <SkillCard 
+                key={skill.id} 
+                skill={skill} 
+                variant="compact" 
+                onClick={() => handleSkillClick(skill.name)}
+              />
             ))}
           </div>
         </div>

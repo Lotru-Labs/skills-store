@@ -105,8 +105,8 @@ export class JsonProvider implements DatabaseProvider {
       );
     }
 
-    if (filters.isPaid !== undefined) {
-      filtered = filtered.filter(skill => skill.isPaid === filters.isPaid);
+    if (filters.isOSS !== undefined) {
+      filtered = filtered.filter(skill => skill.isOSS === filters.isOSS);
     }
 
     if (filters.minRating !== undefined) {
