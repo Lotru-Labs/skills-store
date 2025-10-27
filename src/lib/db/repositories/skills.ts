@@ -127,14 +127,7 @@ export async function updateRating(skillId: string, newRating: number): Promise<
  * Get free skills only
  */
 export async function getFreeSkills(): Promise<Skill[]> {
-  return getSkills({ isPaid: false });
-}
-
-/**
- * Get paid skills only
- */
-export async function getPaidSkills(): Promise<Skill[]> {
-  return getSkills({ isPaid: true });
+  return getSkills({ maxPrice: 0 });
 }
 
 /**

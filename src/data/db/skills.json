@@ -5,7 +5,7 @@
     "description": "A way to keep track of units, perform math safely, and convert between different unit systems.",
     "category": "utilities",
     "price": 0,
-    "isPaid": false,
+    "isOSS": true,
     "author": "Alex Tacescu",
     "downloads": 1105,
     "rating": 4.5,

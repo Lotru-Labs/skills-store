@@ -6,7 +6,7 @@ import { Skill, Category } from '@/types';
 export interface SkillFilters {
   category?: string;
   tags?: string[];
-  isPaid?: boolean;
+  isOSS?: boolean;
   minRating?: number;
   maxPrice?: number;
   author?: string;

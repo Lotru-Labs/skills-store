@@ -6,7 +6,7 @@ export interface Skill {
   description: string;
   category: string;
   price: number;
-  isPaid: boolean;
+  isOSS: boolean; // Open Source Software - if true, skill is open source; if false and price is 0, it's free (closed source)
   author: string;
   downloads: number;
   rating: number;
