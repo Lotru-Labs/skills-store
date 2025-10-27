@@ -11,7 +11,8 @@ The database layer provides an abstraction over data access, allowing the applic
 ```
 src/
 ├── data/db/              # JSON database files
-│   ├── skills.json       # Skills data
+│   ├── skills.json       # Real skills data
+│   ├── mockSkills.json   # Mock skills for development
 │   └── categories.json   # Categories data
 ├── lib/db/               # Database layer
 │   ├── index.ts          # Barrel exports
@@ -43,9 +44,29 @@ interface DatabaseProvider {
 
 The current implementation (`src/lib/db/providers/json.ts`) reads from JSON files with:
 - **In-memory caching**: Reduces file system reads (1-minute TTL)
+- **Mock data support**: Optionally includes mock skills for development
 - **Filtering support**: Category, tags, price, rating, search
 - **Sorting support**: By name, downloads, rating, price, lastUpdated
 - **Aggregations**: Total downloads, skill count, unique tags/authors
+
+#### Mock Skills Configuration
+
+The JSON provider supports loading mock skills for development purposes:
+
+```typescript
+// Automatically includes mock skills in development, excludes in production
+const provider = new JsonProvider();
+
+// Explicitly include mock skills
+const providerWithMocks = new JsonProvider(true);
+
+// Explicitly exclude mock skills (production mode)
+const providerRealOnly = new JsonProvider(false);
+```
+
+By default:
+- **Development** (`NODE_ENV !== 'production'`): Includes both `skills.json` and `mockSkills.json`
+- **Production**: Only includes `skills.json`
 
 ### 3. Repositories
 
@@ -76,15 +97,22 @@ Repositories in `src/lib/db/repositories/` provide high-level functions for data
 The `client.ts` file provides a singleton pattern for the database provider:
 
 ```typescript
-export function getDbProvider(): DatabaseProvider {
-  // Returns the configured provider
-}
+// Default: includes mock skills in dev, excludes in production
+export function getDbProvider(): DatabaseProvider;
+
+// Explicit control over mock skills
+export function getDbProvider(includeMockSkills: boolean): DatabaseProvider;
 ```
 
 Provider selection is controlled via environment variable:
 ```bash
 DB_PROVIDER=json  # Default
 # Future: DB_PROVIDER=postgres
+```
+
+To use only real skills in development:
+```typescript
+const db = getDbProvider(false); // Excludes mock skills
 ```
 
 ## Usage Examples
@@ -132,12 +160,24 @@ const skills = await skillsRepo.getSkills(filters);
 ### skills.json
 Location: `src/data/db/skills.json`
 
-Contains an array of skill objects with properties:
+Contains real, production-ready skills. Currently contains only the Dimensional Variable (DV) skill.
+
+Properties:
 - id, name, description, category
 - price, isPaid, author
 - downloads, rating, version
 - tags, compatibility
 - imageUrl, lastUpdated, icon
+
+### mockSkills.json
+Location: `src/data/db/mockSkills.json`
+
+Contains mock skills for development and testing purposes. These skills are automatically included in development environments but excluded in production.
+
+Use this file for:
+- UI development and testing
+- Populating the UI with sample data
+- Testing filtering and sorting features
 
 ### categories.json
 Location: `src/data/db/categories.json`

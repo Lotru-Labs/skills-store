@@ -14,9 +14,19 @@ export class JsonProvider implements DatabaseProvider {
   private lastSkillsLoad: number = 0;
   private lastCategoriesLoad: number = 0;
   private readonly CACHE_TTL = 60000; // 1 minute cache in dev mode
+  private readonly includeMockSkills: boolean;
 
   private readonly skillsPath = path.join(process.cwd(), 'src/data/db/skills.json');
+  private readonly mockSkillsPath = path.join(process.cwd(), 'src/data/db/mockSkills.json');
   private readonly categoriesPath = path.join(process.cwd(), 'src/data/db/categories.json');
+
+  /**
+   * Create a new JSON provider
+   * @param includeMockSkills - Whether to include mock skills in the data (default: true for dev, false for production)
+   */
+  constructor(includeMockSkills: boolean = process.env.NODE_ENV !== 'production') {
+    this.includeMockSkills = includeMockSkills;
+  }
 
   /**
    * Load skills from JSON file with caching
@@ -30,8 +40,23 @@ export class JsonProvider implements DatabaseProvider {
     }
 
     try {
-      const data = await fs.readFile(this.skillsPath, 'utf-8');
-      this.skillsCache = JSON.parse(data);
+      // Load real skills
+      const realSkillsData = await fs.readFile(this.skillsPath, 'utf-8');
+      const realSkills: Skill[] = JSON.parse(realSkillsData);
+
+      // Optionally load mock skills
+      let allSkills = realSkills;
+      if (this.includeMockSkills) {
+        try {
+          const mockSkillsData = await fs.readFile(this.mockSkillsPath, 'utf-8');
+          const mockSkills: Skill[] = JSON.parse(mockSkillsData);
+          allSkills = [...realSkills, ...mockSkills];
+        } catch (error) {
+          console.warn('Mock skills file not found, using only real skills');
+        }
+      }
+
+      this.skillsCache = allSkills;
       this.lastSkillsLoad = now;
       return this.skillsCache!;
     } catch (error) {
