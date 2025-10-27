@@ -16,6 +16,7 @@ export interface Skill {
   lastUpdated: string;
   compatibility: string[];
   icon?: string; // Optional icon: URL for image or short text (1-3 chars) if no image
+  installUrl?: string; // Optional URL to the skill's installation endpoint
 }
 
 export interface Category {
