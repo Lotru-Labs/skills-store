@@ -1,6 +1,7 @@
 'use client';
 
 import { Skill } from '@/types';
+import Link from 'next/link';
 
 interface SkillCardProps {
   skill: Skill;
@@ -101,9 +102,21 @@ export default function SkillCard({ skill }: SkillCardProps) {
             )}
           </div>
           
-          <button className="w-full sm:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200">
-            {skill.isPaid ? 'Buy for Robot' : 'Add to Robot'}
-          </button>
+          {skill.installUrl ? (
+            <Link 
+              href={skill.installUrl}
+              className="w-full sm:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 text-center"
+            >
+              {skill.isPaid ? 'Buy for Robot' : 'Add to Robot'}
+            </Link>
+          ) : (
+            <Link
+              href="/coming-soon?feature=Skill Installation"
+              className="w-full sm:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 text-center"
+            >
+              {skill.isPaid ? 'Buy for Robot' : 'Add to Robot'}
+            </Link>
+          )}
         </div>
       </div>
     </div>

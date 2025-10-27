@@ -1,5 +1,4 @@
 [
-
   {
     "id": 0,
     "name": "Dimensional Variable (DV)",
@@ -14,7 +13,8 @@
     "tags": ["units"],
     "lastUpdated": "2025-10-05",
     "compatibility": ["Rust", "C/C++", "Python 3.8+"],
-    "icon": "https://dv.alextac.com/img/dv_logo.webp"
+    "icon": "https://dv.alextac.com/img/dv_logo.webp",
+    "installUrl": "https://dv.alextac.com"
   }, 
   {
     "id": "1",
