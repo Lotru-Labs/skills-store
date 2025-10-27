@@ -7,6 +7,9 @@ import { Analytics } from '@vercel/analytics/next';
 export const metadata: Metadata = {
   title: "RSI · The Robotics Skills Index",
   description: "Find, install and publish robotics skills. The RSI is a repository of software for the robotics community.",
+  icons: {
+    icon: '/rsi_icon.webp',
+  },
 };
 
 export default function RootLayout({
