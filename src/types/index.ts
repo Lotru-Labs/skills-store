@@ -15,7 +15,7 @@ export interface Skill {
   imageUrl: string;
   lastUpdated: string;
   compatibility: string[];
-  icon?: string; // Optional icon emoji for the skill
+  icon?: string; // Optional icon: URL for image or short text (1-3 chars) if no image
 }
 
 export interface Category {

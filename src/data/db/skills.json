@@ -1,4 +1,21 @@
 [
+
+  {
+    "id": 0,
+    "name": "Dimensional Variable (DV)",
+    "description": "A way to keep track of units, perform math safely, and convert between different unit systems.",
+    "category": "utilities",
+    "price": 0,
+    "isPaid": false,
+    "author": "Alex Tacescu",
+    "downloads": 1105,
+    "rating": 4.5,
+    "version": "0.1.1",
+    "tags": ["units"],
+    "lastUpdated": "2025-10-05",
+    "compatibility": ["Rust", "C/C++", "Python 3.8+"],
+    "icon": "https://dv.alextac.com/img/dv_logo.webp"
+  }, 
   {
     "id": "1",
     "name": "Advanced SLAM Navigator",
@@ -11,10 +28,9 @@
     "rating": 4.8,
     "version": "2.3.1",
     "tags": ["slam", "navigation", "mapping", "localization"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-10-01",
     "compatibility": ["ROS2", "Python 3.8+"],
-    "icon": "🗺️"
+    "icon": "SLM"
   },
   {
     "id": "2",
@@ -28,10 +44,9 @@
     "rating": 4.9,
     "version": "1.5.0",
     "tags": ["computer-vision", "detection", "yolo", "ml"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-09-28",
     "compatibility": ["ROS2", "Python 3.9+", "CUDA 11.0+"],
-    "icon": "📦"
+    "icon": "OBJ"
   },
   {
     "id": "3",
@@ -45,10 +60,9 @@
     "rating": 4.6,
     "version": "3.0.2",
     "tags": ["manipulation", "gripper", "control", "force-feedback"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-10-05",
     "compatibility": ["ROS2", "MoveIt2"],
-    "icon": "🦾"
+    "icon": "GRP"
   },
   {
     "id": "4",
@@ -62,10 +76,9 @@
     "rating": 4.5,
     "version": "1.2.3",
     "tags": ["nlp", "speech", "voice-control", "multilingual"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-09-15",
     "compatibility": ["ROS2", "Python 3.8+"],
-    "icon": "🎤"
+    "icon": "VOC"
   },
   {
     "id": "5",
@@ -79,10 +92,9 @@
     "rating": 4.7,
     "version": "2.1.0",
     "tags": ["planning", "pathfinding", "astar", "navigation"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-10-10",
     "compatibility": ["ROS2", "C++17", "Python 3.8+"],
-    "icon": "🎯"
+    "icon": "A*"
   },
   {
     "id": "6",
@@ -96,10 +108,9 @@
     "rating": 4.4,
     "version": "1.8.5",
     "tags": ["control", "pid", "actuators", "tuning"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-09-20",
     "compatibility": ["ROS2", "Real-Time"],
-    "icon": "⚙️"
+    "icon": "PID"
   },
   {
     "id": "7",
@@ -113,10 +124,9 @@
     "rating": 4.9,
     "version": "2.0.1",
     "tags": ["lidar", "perception", "point-cloud", "sensors"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-10-08",
     "compatibility": ["ROS2", "PCL 1.12+"],
-    "icon": "📡"
+    "icon": "LDR"
   },
   {
     "id": "8",
@@ -130,10 +140,9 @@
     "rating": 4.6,
     "version": "1.4.2",
     "tags": ["integration", "arduino", "microcontroller", "bridge"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-09-30",
     "compatibility": ["ROS2", "Arduino"],
-    "icon": "🔌"
+    "icon": "ARD"
   },
   {
     "id": "9",
@@ -147,10 +156,9 @@
     "rating": 4.8,
     "version": "1.1.0",
     "tags": ["vision", "segmentation", "deep-learning", "ai"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-10-12",
     "compatibility": ["ROS2", "PyTorch", "CUDA 11.0+"],
-    "icon": "🧠"
+    "icon": "SEG"
   },
   {
     "id": "10",
@@ -164,10 +172,9 @@
     "rating": 4.5,
     "version": "2.2.0",
     "tags": ["navigation", "safety", "obstacle-avoidance", "reactive"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-10-03",
     "compatibility": ["ROS2", "C++17"],
-    "icon": "🚧"
+    "icon": "OBS"
   },
   {
     "id": "11",
@@ -181,10 +188,9 @@
     "rating": 4.7,
     "version": "1.0.5",
     "tags": ["multi-robot", "coordination", "swarm", "planning"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-09-25",
     "compatibility": ["ROS2", "DDS"],
-    "icon": "🤖"
+    "icon": "MRC"
   },
   {
     "id": "12",
@@ -198,10 +204,9 @@
     "rating": 4.6,
     "version": "1.7.3",
     "tags": ["imu", "sensor-fusion", "kalman", "localization"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-10-07",
     "compatibility": ["ROS2", "C++17", "Python 3.8+"],
-    "icon": "🧭"
+    "icon": "IMU"
   },
   {
     "id": "13",
@@ -215,10 +220,9 @@
     "rating": 4.9,
     "version": "3.2.0",
     "tags": ["navigation", "autonomous", "slam", "planning"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-10-15",
     "compatibility": ["ROS2", "Nav2"],
-    "icon": "🚗"
+    "icon": "AUT"
   },
   {
     "id": "14",
@@ -232,10 +236,9 @@
     "rating": 4.7,
     "version": "2.1.4",
     "tags": ["manipulation", "kinematics", "arm", "inverse-kinematics"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-10-11",
     "compatibility": ["ROS2", "MoveIt2", "KDL"],
-    "icon": "🦿"
+    "icon": "ARM"
   },
   {
     "id": "15",
@@ -249,10 +252,9 @@
     "rating": 4.5,
     "version": "1.3.2",
     "tags": ["vision", "face-recognition", "deep-learning", "detection"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-09-22",
     "compatibility": ["ROS2", "OpenCV", "TensorFlow"],
-    "icon": "👤"
+    "icon": "FCE"
   },
   {
     "id": "16",
@@ -266,10 +268,9 @@
     "rating": 4.6,
     "version": "2.0.1",
     "tags": ["speech", "tts", "voice-synthesis", "audio"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-10-09",
     "compatibility": ["ROS2", "Python 3.8+"],
-    "icon": "🔊"
+    "icon": "TTS"
   },
   {
     "id": "17",
@@ -283,10 +284,9 @@
     "rating": 4.4,
     "version": "1.6.0",
     "tags": ["planning", "rrt", "pathfinding", "sampling"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-09-18",
     "compatibility": ["ROS2", "C++17", "OMPL"],
-    "icon": "🌳"
+    "icon": "RRT"
   },
   {
     "id": "18",
@@ -300,10 +300,9 @@
     "rating": 4.8,
     "version": "2.3.0",
     "tags": ["control", "mpc", "trajectory", "optimization"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-10-14",
     "compatibility": ["ROS2", "CasADi", "Python 3.9+"],
-    "icon": "🎯"
+    "icon": "MPC"
   },
   {
     "id": "19",
@@ -317,10 +316,9 @@
     "rating": 4.7,
     "version": "1.9.2",
     "tags": ["perception", "camera", "calibration", "stereo"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-10-02",
     "compatibility": ["ROS2", "OpenCV", "Python 3.8+"],
-    "icon": "📷"
+    "icon": "CAM"
   },
   {
     "id": "20",
@@ -334,9 +332,8 @@
     "rating": 4.5,
     "version": "1.2.0",
     "tags": ["integration", "mqtt", "iot", "bridge"],
-    "imageUrl": "/api/placeholder/400/300",
     "lastUpdated": "2025-09-27",
     "compatibility": ["ROS2", "MQTT", "Python 3.8+"],
-    "icon": "📡"
+    "icon": "IOT"
   }
 ]

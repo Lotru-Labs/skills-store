@@ -6,34 +6,43 @@ interface SkillCardProps {
   skill: Skill;
 }
 
-// Default icon to use when no skill-specific icon is provided
-const DEFAULT_ICON = '📦';
-
-// Get category default icons as fallback
-const getCategoryIcon = (category: string): string => {
-  const categoryIcons: { [key: string]: string } = {
-    'navigation': '🧭',
-    'manipulation': '🤖',
-    'vision': '👁️',
-    'speech': '💬',
-    'planning': '🗺️',
-    'control': '🎮',
-    'perception': '📡',
-    'integration': '🔗',
+// Get category default text as fallback
+const getCategoryFallback = (category: string): string => {
+  const categoryFallbacks: { [key: string]: string } = {
+    'navigation': 'NAV',
+    'manipulation': 'MAN',
+    'vision': 'VIS',
+    'speech': 'NLP',
+    'planning': 'PLN',
+    'control': 'CTL',
+    'perception': 'PER',
+    'integration': 'INT',
+    'utilities': 'UTL',
   };
-  return categoryIcons[category] || DEFAULT_ICON;
+  return categoryFallbacks[category] || 'SKL';
 };
 
 export default function SkillCard({ skill }: SkillCardProps) {
-  // Use skill.icon if available, otherwise fall back to category icon, then to default icon
-  const displayIcon = skill.icon || getCategoryIcon(skill.category);
+  // Determine what to display: icon as image URL or text
+  const isImageUrl = skill.icon && (skill.icon.startsWith('http://') || skill.icon.startsWith('https://'));
+  const displayText = !isImageUrl ? (skill.icon || getCategoryFallback(skill.category)) : '';
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200 dark:border-gray-700">
       <div className="flex flex-col sm:flex-row gap-4 p-5">
-        {/* Icon Section */}
-        <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg text-5xl">
-          {displayIcon}
+        {/* Image/Text Section */}
+        <div className={`flex-shrink-0 flex items-center justify-center w-20 h-20 rounded-lg overflow-hidden ${!isImageUrl ? 'bg-slate-600 dark:bg-slate-700' : ''}`}>
+          {isImageUrl ? (
+            <img 
+              src={skill.icon} 
+              alt={skill.name}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <span className="text-white font-bold text-xl">
+              {displayText}
+            </span>
+          )}
         </div>
         
         {/* Main Content Section */}
@@ -93,7 +102,7 @@ export default function SkillCard({ skill }: SkillCardProps) {
           </div>
           
           <button className="w-full sm:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200">
-            {skill.isPaid ? 'Buy Now' : 'Install'}
+            {skill.isPaid ? 'Buy for Robot' : 'Add to Robot'}
           </button>
         </div>
       </div>

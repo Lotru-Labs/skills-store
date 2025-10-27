@@ -167,7 +167,19 @@ export default function HomeClient({ initialSkills, initialCategories }: HomeCli
                 className="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 transition-colors"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <div className="text-3xl">{skill.icon}</div>
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    {skill.icon && (skill.icon.startsWith('http://') || skill.icon.startsWith('https://')) ? (
+                      <img 
+                        src={skill.icon} 
+                        alt={skill.name}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <span className="text-white font-bold text-sm">
+                        {skill.icon || 'SKL'}
+                      </span>
+                    )}
+                  </div>
                   {skill.isPaid && (
                     <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 text-xs font-semibold rounded">
                       ${skill.price}
