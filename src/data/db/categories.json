@@ -46,5 +46,17 @@
     "name": "Integration",
     "icon": "🔗",
     "count": 2
+  },
+  {
+    "id": "simulation",
+    "name": "Simulation",
+    "icon": "🕹️",
+    "count": 0
+  },
+  {
+    "id": "utilities",
+    "name": "Utilities",
+    "icon": "🛠️",
+    "count": 1
   }
 ]
