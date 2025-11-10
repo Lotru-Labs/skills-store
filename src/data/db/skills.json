@@ -15,5 +15,39 @@
     "compatibility": ["Rust", "C/C++", "Python 3.8+"],
     "icon": "https://dv.alextac.com/img/dv_logo.webp",
     "installUrl": "https://dv.alextac.com"
+  },
+  {
+    "id": 1,
+    "name": "MavDrive Wheel Controller",
+    "description": "The controller for MavDrive omni-directional wheels, supporting various drive modes and configurations.",
+    "category": "control",
+    "price": 99.99,
+    "isOSS": false,
+    "author": "Lotru Labs",
+    "downloads": 2,
+    "rating": 4.5,
+    "version": "0.0.1",
+    "tags": ["omni-directional", "swerve-drive", "mavdrive"],
+    "lastUpdated": "2025-08-30",
+    "compatibility": ["Rust", "C/C++", "Python 3.8+"],
+    "icon": "MVD",
+    "installUrl": ""
+  },
+  {
+    "id": 2,
+    "name": "Joystick Controller",
+    "description": "A simple joystick controller for teleoperating robots using a gamepad or joystick.",
+    "category": "control",
+    "price": 0,
+    "isOSS": true,
+    "author": "Lotru Labs",
+    "downloads": 5,
+    "rating": 4.0,
+    "version": "0.0.1",
+    "tags": ["joystick", "teleoperation", "gamepad", "3dmouse", "spacenav", "3dconnexion"],
+    "lastUpdated": "2025-08-30",
+    "compatibility": ["Rust", "C/C++", "Python 3.8+"],
+    "icon": "JCTL",
+    "installUrl": "#"
   }
 ]
