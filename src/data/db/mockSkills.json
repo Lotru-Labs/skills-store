@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 100,
     "name": "Advanced SLAM Navigator",
     "description": "State-of-the-art Simultaneous Localization and Mapping implementation with real-time path optimization",
     "category": "navigation",
@@ -16,7 +16,7 @@
     "icon": "SLM"
   },
   {
-    "id": "2",
+    "id": 101,
     "name": "Object Detection Suite",
     "description": "Pre-trained models for detecting common household and industrial objects using YOLO and Faster R-CNN",
     "category": "vision",
@@ -32,7 +32,7 @@
     "icon": "OBJ"
   },
   {
-    "id": "3",
+    "id": 102,
     "name": "Gripper Control Pro",
     "description": "Precise control algorithms for various robotic grippers with force feedback and adaptive grasping",
     "category": "manipulation",
@@ -48,7 +48,7 @@
     "icon": "GRP"
   },
   {
-    "id": "4",
+    "id": 103,
     "name": "Voice Command Interface",
     "description": "Natural language processing for robot voice commands with multi-language support",
     "category": "speech",
@@ -64,7 +64,7 @@
     "icon": "VOC"
   },
   {
-    "id": "5",
+    "id": 104,
     "name": "A* Path Planner",
     "description": "Optimized A-star path planning with dynamic obstacle avoidance and replanning capabilities",
     "category": "planning",
@@ -80,23 +80,7 @@
     "icon": "A*"
   },
   {
-    "id": "6",
-    "name": "PID Controller Suite",
-    "description": "Collection of tuned PID controllers for various robot actuators and systems",
-    "category": "control",
-    "price": 19.99,
-    "isOSS": false,
-    "author": "ControlSys Inc",
-    "downloads": 789,
-    "rating": 4.4,
-    "version": "1.8.5",
-    "tags": ["control", "pid", "actuators", "tuning"],
-    "lastUpdated": "2025-01-01",
-    "compatibility": ["ROS2", "Real-Time"],
-    "icon": "PID"
-  },
-  {
-    "id": "7",
+    "id": 106,
     "name": "LiDAR Processing Toolkit",
     "description": "Advanced LiDAR data processing with point cloud filtering and feature extraction",
     "category": "perception",
@@ -112,39 +96,39 @@
     "icon": "LDR"
   },
   {
-    "id": "8",
-    "name": "ROS2-Arduino Bridge",
-    "description": "Seamless integration between ROS2 and Arduino microcontrollers",
-    "category": "integration",
-    "price": 0,
+    "id": 107,
+    "name": "Quadruped Walking Gait",
+    "description": "Advanced control algorithms for quadruped robot walking with dynamic gait adaptation",
+    "category": "control",
+    "price": 49.99,
     "isOSS": false,
-    "author": "OpenSource Robotics",
-    "downloads": 234,
-    "rating": 4.6,
-    "version": "1.4.2",
-    "tags": ["integration", "arduino", "microcontroller", "bridge"],
-    "lastUpdated": "2025-01-01",
-    "compatibility": ["ROS2", "Arduino"],
-    "icon": "ARD"
+    "author": "RoboDynamics",
+    "downloads": 923,
+    "rating": 4.9,
+    "version": "2.0.1",
+    "tags": ["quadruped", "walking", "gait", "control"],
+    "lastUpdated": "2025-02-01",
+    "compatibility": ["ROS2", "PCL 1.12+"],
+    "icon": "LDR"
   },
   {
-    "id": "9",
-    "name": "Semantic Segmentation Models",
-    "description": "Deep learning models for real-time semantic segmentation of environments",
-    "category": "vision",
+    "id": 108,
+    "name": "Quadruped Backflip Skill",
+    "description": "Perform dynamic backflips with your quadruped robot using advanced motion planning",
+    "category": "control",
     "price": 59.99,
     "isOSS": false,
-    "author": "DeepVision AI",
+    "author": "RoboDynamics",
     "downloads": 678,
     "rating": 4.8,
     "version": "1.1.0",
-    "tags": ["vision", "segmentation", "deep-learning", "ai"],
+    "tags": ["control", "backflip", "quadruped", "motion-planning"],
     "lastUpdated": "2025-01-01",
     "compatibility": ["ROS2", "PyTorch", "CUDA 11.0+"],
-    "icon": "SEG"
+    "icon": "BAK"
   },
   {
-    "id": "10",
+    "id": 109,
     "name": "Obstacle Avoidance System",
     "description": "Reactive obstacle avoidance using dynamic window approach and potential fields",
     "category": "navigation",
@@ -160,7 +144,7 @@
     "icon": "OBS"
   },
   {
-    "id": "11",
+    "id": 110,
     "name": "Multi-Robot Coordinator",
     "description": "Coordinate multiple robots in shared workspaces with collision avoidance",
     "category": "planning",
@@ -176,7 +160,7 @@
     "icon": "MRC"
   },
   {
-    "id": "12",
+    "id": 111,
     "name": "IMU Fusion Filter",
     "description": "Kalman filter for fusing IMU data with odometry and GPS",
     "category": "perception",
@@ -192,7 +176,7 @@
     "icon": "IMU"
   },
   {
-    "id": "13",
+    "id": 112,
     "name": "Autonomous Navigation Stack",
     "description": "Complete autonomous navigation solution with path planning, obstacle avoidance, and localization",
     "category": "navigation",
@@ -208,7 +192,7 @@
     "icon": "AUT"
   },
   {
-    "id": "14",
+    "id": 113,
     "name": "Robotic Arm Kinematics",
     "description": "Forward and inverse kinematics solver for 6-DOF robotic arms",
     "category": "manipulation",
@@ -224,7 +208,7 @@
     "icon": "ARM"
   },
   {
-    "id": "15",
+    "id": 114,
     "name": "Face Recognition Module",
     "description": "Real-time face detection and recognition using deep learning models",
     "category": "vision",
@@ -240,7 +224,7 @@
     "icon": "FCE"
   },
   {
-    "id": "16",
+    "id": 115,
     "name": "Text-to-Speech Engine",
     "description": "Natural sounding text-to-speech with emotion and voice customization",
     "category": "speech",
@@ -256,7 +240,7 @@
     "icon": "TTS"
   },
   {
-    "id": "17",
+    "id": 116,
     "name": "RRT Path Planner",
     "description": "Rapidly-exploring Random Tree path planning for complex environments",
     "category": "planning",
@@ -272,7 +256,7 @@
     "icon": "RRT"
   },
   {
-    "id": "18",
+    "id": 117,
     "name": "Model Predictive Controller",
     "description": "Advanced MPC implementation for trajectory tracking and control",
     "category": "control",
@@ -288,35 +272,37 @@
     "icon": "MPC"
   },
   {
-    "id": "19",
-    "name": "Camera Calibration Tool",
-    "description": "Automated camera calibration and distortion correction for stereo and mono cameras",
-    "category": "perception",
+    "id": 118,
+    "name": "Clothes Folding Skill",
+    "description": "Automated clothes folding using computer vision and robotics",
+    "category": "manipulation",
     "price": 0,
     "isOSS": false,
-    "author": "CamCalib",
+    "author": "RoboDynamics",
     "downloads": 123,
     "rating": 4.7,
     "version": "1.9.2",
-    "tags": ["perception", "camera", "calibration", "stereo"],
-    "lastUpdated": "2025-01-01",
-    "compatibility": ["ROS2", "OpenCV", "Python 3.8+"],
-    "icon": "CAM"
+    "tags": ["ArmDrive", "manipulation", "clothes-folding", "vision", "robotics"],
+    "lastUpdated": "2025-03-01",
+    "compatibility": ["ArmDrive", "OpenCV", "Python 3.8+"],
+    "icon": "CFS",
+    "installUrl": ""
   },
   {
-    "id": "20",
-    "name": "ROS2-MQTT Bridge",
-    "description": "Bidirectional bridge between ROS2 and MQTT for IoT integration",
-    "category": "integration",
+    "id": 119,
+    "name": "Dishwasher Loading Skill",
+    "description": "Automated loading of dishwashers using computer vision and robotics",
+    "category": "manipulation",
     "price": 0,
     "isOSS": false,
-    "author": "IoT Robotics",
+    "author": "RoboDynamics",
     "downloads": 345,
-    "rating": 4.5,
-    "version": "1.2.0",
-    "tags": ["integration", "mqtt", "iot", "bridge"],
-    "lastUpdated": "2025-01-01",
-    "compatibility": ["ROS2", "MQTT", "Python 3.8+"],
-    "icon": "IOT"
+    "rating": 4.6,
+    "version": "2.0.0",
+    "tags": ["ArmDrive", "manipulation", "dishwasher-loading", "vision", "robotics"],
+    "lastUpdated": "2025-03-01",
+    "compatibility": ["ArmDrive", "PCL 1.12+", "OpenCV"],
+    "icon": "DSH",
+    "installUrl": ""
   }
 ]
